@@ -21,10 +21,10 @@ app.get("/", (req, res) => {
   res.json({ message: "Welcome on my Marvel API" });
 });
 
-// const contentRoutes = require("./routes/content");
+const contentRoutes = require("./routes/content");
 const userRoutes = require("./routes/user");
 const searchRoutes = require("./routes/search");
-// app.use(contentRoutes);
+app.use(contentRoutes);
 app.use(userRoutes);
 app.use(searchRoutes);
 

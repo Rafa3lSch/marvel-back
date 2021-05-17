@@ -55,7 +55,7 @@ router.post("/favorites", async (req, res) => {
       if (i === 0) {
         for (let j = 0; j < fav[i].length; j++) {
           const response = await axios.get(
-            `https://lereacteur-marvel-api.herokuapp.com/character/${fav[i][j]}?apiKey=${process.env.MARVEL_API_KEY}`
+            `https://lereacteur-marvel-api.herokuapp.com/characters/${fav[i][j]}?apiKey=${process.env.MARVEL_API_KEY}`
           );
 
           favTab[0].push(response.data);
@@ -63,7 +63,7 @@ router.post("/favorites", async (req, res) => {
       } else {
         for (let j = 0; j < fav[i].length; j++) {
           const response = await axios.get(
-            `https://lereacteur-marvel-api.herokuapp.com/comic/${fav[i][j]}?apiKey=${process.env.MARVEL_API_KEY}`
+            `https://lereacteur-marvel-api.herokuapp.com/comics/${fav[i][j]}?apiKey=${process.env.MARVEL_API_KEY}`
           );
 
           favTab[1].push(response.data);
